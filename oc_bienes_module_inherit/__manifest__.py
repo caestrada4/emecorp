@@ -12,7 +12,7 @@
 Bienes Inmuebles  Module
 ==================
     """,
-    'depends': ['base','oc_bienes_module_buttons','oc_bienes_module_inherit'],
+    'depends': ['base'],
     'data': [
         #
         'views/oc_bienes_inm.xml',
