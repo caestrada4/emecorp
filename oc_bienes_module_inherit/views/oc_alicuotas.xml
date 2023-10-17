@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista tipo "form" para el modelo oc.alicuotas -->
+        <record id="view_alicuotas_form" model="ir.ui.view">
+            <field name="name">oc.alicuotas.form</field>
+            <field name="model">oc.alicuotas</field>
+            <field name="arch" type="xml">
+                <form string="Alicuotas">
+                    <group>
+                        <field name="company_id"/>
+                        <field name="bien_inmueble_id"/>
+                        <field name="fecha_pagos"/>
+                        <field name="valor"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- Vista tipo "tree" para el modelo oc.alicuotas -->
+        <record id="view_alicuotas_tree" model="ir.ui.view">
+            <field name="name">oc.alicuotas.tree</field>
+            <field name="model">oc.alicuotas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="company_id"/>
+                    <field name="bien_inmueble_id"/>
+                    <field name="fecha_pagos"/>
+                    <field name="valor"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Acción para abrir la vista tipo "tree" de oc.alicuotas -->
+        <record id="action_alicuotas_tree" model="ir.actions.act_window">
+            <field name="name">Alicuotas</field>
+            <field name="res_model">oc.alicuotas</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

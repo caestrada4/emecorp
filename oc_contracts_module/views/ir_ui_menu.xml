@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Technical Menu -->
+        <menuitem
+            id="menu_oc_contracts_module_main_module_id"
+            name="Contratos"
+            web_icon="oc_contracts_module,static/description/icon.png"
+            sequence="70" />
+
+        <menuitem
+            id="menu_oc_contracts_module_first_module_id"
+            name="Contratos"
+            parent="menu_oc_contracts_module_main_module_id"
+            sequence="1" />
+        <!-- Cambiar el nombre del menú a "Contratos Inmobiliarios" -->
+        <menuitem
+            id="menu_oc_contracts_inm_module_id"
+            name="Contratos Inmobiliarios"
+            parent="menu_oc_contracts_module_first_module_id"
+            sequence="1"
+            action="action_contractc_inm_tree" />  <!-- Asociar la acción de la vista tree aquí -->
+
+    </data>
+</odoo>

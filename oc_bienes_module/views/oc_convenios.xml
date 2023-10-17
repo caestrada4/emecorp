@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista tipo "form" para el modelo oc.convenios -->
+        <record id="view_convenios_form" model="ir.ui.view">
+            <field name="name">oc.convenios.form</field>
+            <field name="model">oc.convenios</field>
+            <field name="arch" type="xml">
+                <form string="Convenios">
+                    <group>
+                        <field name="company_id"/>
+                        <field name="organizacion"/>
+                        <field name="fecha_primer_pago"/>
+                        <field name="valor_convenio"/>
+                        <field name="numero_cuotas"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- Vista tipo "tree" para el modelo oc.convenios -->
+        <record id="view_convenios_tree" model="ir.ui.view">
+            <field name="name">oc.convenios.tree</field>
+            <field name="model">oc.convenios</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="company_id"/>
+                    <field name="organizacion"/>
+                    <field name="fecha_primer_pago"/>
+                    <field name="valor_convenio"/>
+                    <field name="numero_cuotas"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Acción para abrir la vista tipo "tree" de oc.convenios -->
+        <record id="action_convenios_tree" model="ir.actions.act_window">
+            <field name="name">Convenios</field>
+            <field name="res_model">oc.convenios</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_oc_bien_inm,oc_bien_inm,model_oc_bien_inm,,1,1,1,1
+access_oc_alicuotas,oc_alicuotas,model_oc_alicuotas,,1,1,1,1
+access_oc_convenios,oc_convenios,model_oc_convenios,,1,1,1,1
+access_oc_llaves,oc_llaves,model_oc_llaves,,1,1,1,1
+access_oc_entrega,oc_entrega,model_oc_entrega,,1,1,1,1
+
+

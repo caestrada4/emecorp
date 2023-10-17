@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista tipo "form" para el modelo oc.entrega -->
+        <record id="view_entrega_form" model="ir.ui.view">
+            <field name="name">oc.entrega.form</field>
+            <field name="model">oc.entrega</field>
+            <field name="arch" type="xml">
+                <form string="Entrega">
+                    <group>
+                        <field name="numero"/>
+                        <field name="tipo"/>
+                        <field name="company_id"/>
+                        <field name="bien_inmueble_id"/>
+                        <field name="fecha_entrega"/>
+                        <field name="cliente"/>
+                        <field name="estado"/>
+                    </group>
+                    <group>
+                        <field name="solicitante"/>
+                        <field name="asignado_a"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_entrega_tree" model="ir.ui.view">
+            <field name="name">oc.entrega.tree</field>
+            <field name="model">oc.entrega</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numero"/>
+                    <field name="tipo"/>
+                    <field name="company_id"/>
+                    <field name="bien_inmueble_id"/>
+                    <field name="fecha_entrega"/>
+                    <field name="cliente"/>
+                    <field name="estado"/>
+                    <field name="solicitante"/>
+                    <field name="asignado_a"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Acción para abrir la vista tipo "tree" de oc.entrega -->
+        <record id="action_entrega_tree" model="ir.actions.act_window">
+            <field name="name">Entregas</field>
+            <field name="res_model">oc.entrega</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

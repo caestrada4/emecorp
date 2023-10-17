@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista tipo "form" para el modelo oc.llaves -->
+        <record id="view_llaves_form" model="ir.ui.view">
+            <field name="name">oc.llaves.form</field>
+            <field name="model">oc.llaves</field>
+            <field name="arch" type="xml">
+                <form string="Entrega de llaves">
+                    <group>
+                        <field name="ubicacion"/>
+                        <field name="bienes_inmuebles_id"/>
+                        <field name="urbanizacion"/>
+                        <field name="casillero"/>
+                    </group>
+                    <group>
+                        <field name="quien_recibe"/>
+                        <field name="fecha_entrega"/>
+                        <field name="dia_visita"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vista tipo "tree" para el modelo oc.llaves -->
+        <record id="view_llaves_tree" model="ir.ui.view">
+            <field name="name">oc.llaves.tree</field>
+            <field name="model">oc.llaves</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ubicacion"/>
+                    <field name="bienes_inmuebles_id"/>
+                    <field name="urbanizacion"/>
+                    <field name="casillero"/>
+                    <field name="quien_recibe"/>
+                    <field name="fecha_entrega"/>
+                    <field name="dia_visita"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Acción para abrir la vista tipo "tree" de oc.llaves -->
+        <record id="action_llaves_tree" model="ir.actions.act_window">
+            <field name="name">Llaves</field>
+            <field name="res_model">oc.llaves</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

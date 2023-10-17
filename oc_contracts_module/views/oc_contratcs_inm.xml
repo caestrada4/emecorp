@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista tipo "form" para el modelo oc.contractc.inm -->
+        <record id="view_contractc_inm_form" model="ir.ui.view">
+            <field name="name">oc.contractc.inm.form</field>
+            <field name="model">oc.contractc.inm</field>
+            <field name="arch" type="xml">
+                <form string="Contrato de Inmueble">
+                    <group>
+                        <group>
+                            <field name="numero_contrato" />
+                            <field name="objeto" />
+                            <field name="company_id" />
+                            <field name="fecha_solicitud" />
+                            <field name="fecha_creacion" />
+                            <field name="fecha_publicacion" />
+                            <field name="estado" />
+                            <field name="razon_social" />
+                            <field name="fecha_vencimiento" />
+                            <field name="nombre_arrendadora" />
+                            <field name="precio_venta_inmueble" />
+
+                        </group>
+                        <group>
+                            <field name="canon_arrendamiento" />
+                            <field name="precio_contrato" />
+                            <field name="bien_inmueble" />
+                            <field name="vendedor" />
+                            <field name="corredor" />
+                            <field name="proyecto_construccion" />
+                            <field name="forma_pago" />
+                            <field name="fecha_pago_financiar" />
+                            <field name="entidad_financiera" />
+                            <field name="valor_financiar" />
+                            <field name="plazo" />
+                            <field name="unidad_medida" />
+                        </group>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+        <!-- Vista tipo "tree" para el modelo oc.contractc.inm -->
+        <record id="view_contractc_inm_tree" model="ir.ui.view">
+            <field name="name">oc.contractc.inm.tree</field>
+            <field name="model">oc.contractc.inm</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numero_contrato" />
+                    <field name="objeto" />
+                    <field name="company_id" />
+                    <field name="fecha_solicitud" />
+                    <field name="fecha_creacion" />
+                    <field name="fecha_publicacion" />
+                    <field name="estado" />
+                    <field name="razon_social" />
+                    <field name="fecha_vencimiento" />
+                    <field name="nombre_arrendadora" />
+                    <field name="precio_venta_inmueble" />
+                    <field name="canon_arrendamiento" />
+                    <field name="precio_contrato" />
+                    <field name="bien_inmueble" />
+                    <field name="vendedor" invisible="1" />
+                    <field name="corredor" invisible="1" />
+                    <field name="proyecto_construccion" invisible="1" />
+                    <field name="forma_pago" invisible="1" />
+                    <field name="fecha_pago_financiar" invisible="1" />
+                    <field name="entidad_financiera" invisible="1" />
+                    <field name="valor_financiar" invisible="1" />
+                    <field name="plazo" invisible="1" />
+                    <field name="unidad_medida" invisible="1" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Acción de menú para abrir la vista tipo "tree" -->
+        <record id="action_contractc_inm_tree" model="ir.actions.act_window">
+            <field name="name">Contratos de Inmuebles</field>
+            <field name="res_model">oc.contractc.inm</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

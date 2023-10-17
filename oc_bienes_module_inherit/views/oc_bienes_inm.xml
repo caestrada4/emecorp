@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista tipo "tree" para el modelo oc.bien.inm -->
+        <record id="view_bien_inm_tree" model="ir.ui.view">
+            <field name="name">oc.bien.inm.tree</field>
+            <field name="model">oc.bien.inm</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo_bien" />
+                    <field name="tipo" />
+                    <field name="nombre" />
+                    <field name="ciudad" />
+                    <field name="costo_recepcion" />
+                    <field name="costo_escritura" />
+                    <field name="precio_lista" />
+                    <field name="tipo_derecho" />
+                    <field name="fecha_adquisicion" />
+                    <field name="company_id" />
+                    <field name="fecha_efectiva_recepcion_material" />
+                    <field name="recibido_de" />
+                    <field name="estado" />
+                    <field name="subestado" />
+                    <field name="destino" />
+                    <field name="fecha_pactada_recepcion_material" invisible="1" />
+                    <field name="fecha_pactada_recepcion_legal" invisible="1" />
+                    <field name="area_solar_m2" invisible="1" />
+                    <field name="area_construccion_m2" invisible="1" />
+                    <field name="bienes_accesorios" invisible="1" />
+                    <field name="contrato_origen" invisible="1" />
+                    <field name="uso_suelo" invisible="1" />
+                    <field name="valor_alicuota" invisible="1" />
+                </tree>
+            </field>
+        </record>
+        <record id="view_bien_inm_form" model="ir.ui.view">
+            <field name="name">oc.bien.inm.form</field>
+            <field name="model">oc.bien.inm</field>
+            <field name="arch" type="xml">
+                <form string="Bien Inmueble">
+                    <group>
+                        <group>
+                            <!-- Campos para mostrar a la izquierda -->
+                            <field name="codigo_bien" />
+                            <field name="tipo" />
+                            <field name="nombre" />
+                            <field name="ciudad" />
+                            <field name="costo_recepcion" />
+                            <field name="costo_escritura" />
+                            <field name="precio_lista" />
+                            <field name="tipo_derecho" />
+                            <field name="fecha_adquisicion" />
+                            <field name="company_id" />
+                            <field name="fecha_efectiva_recepcion_material" />
+                            <field name="recibido_de" />
+                            <field name="estado" />
+                            <field name="subestado" />
+                            <field name="destino" />
+                        </group>
+                        <group>
+                            <!-- Campos para mostrar a la derecha -->
+                            <field name="fecha_pactada_recepcion_material" />
+                            <field name="fecha_pactada_recepcion_legal" />
+                            <field name="area_solar_m2" />
+                            <field name="area_construccion_m2" />
+                            <field name="bienes_accesorios" />
+                            <field name="contrato_origen" />
+                            <field name="uso_suelo" />
+                            <field name="valor_alicuota" />
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- Acción para abrir la vista tipo "tree" -->
+        <record id="action_bien_inm_tree" model="ir.actions.act_window">
+            <field name="name">Bienes Inmuebles</field>
+            <field name="res_model">oc.bien.inm</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

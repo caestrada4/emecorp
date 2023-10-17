@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Technical Menu -->
+        <menuitem
+            id="menu_oc_bienes_module_main_module_id"
+            name="Bienes Inmuebles"
+            web_icon="oc_bienes_module,static/description/icon.png"
+            sequence="50" />
+
+        <menuitem
+            id="menu_oc_bienes_module_first_module_id"
+            name="Bienes Inmuebles"
+            parent="menu_oc_bienes_module_main_module_id"
+            sequence="1"
+            action="action_bien_inm_tree"
+        />
+
+
+        <menuitem
+            id="menu_oc_pagos_module_first_module_id"
+            name="Pagos"
+            parent="menu_oc_bienes_module_main_module_id"
+            sequence="2"
+        />
+
+        <menuitem
+            id="menu_oc_operaciones_module_first_module_id"
+            name="Operaciones"
+            parent="menu_oc_bienes_module_main_module_id"
+            sequence="3"
+        />
+        <!-- Cambiar el nombre del menú a "Contratos Inmobiliarios" -->
+
+        <menuitem
+            id="menu_oc_alicuotas_inm_module_id"
+            name="Alicuotas"
+            parent="menu_oc_pagos_module_first_module_id"
+            sequence="1"
+            action="action_alicuotas_tree" />  <!-- Asociar la acción de la vista tree aquí -->
+        <menuitem
+            id="menu_oc_convenios_inm_module_id"
+            name="Convenios"
+            parent="menu_oc_pagos_module_first_module_id"
+            sequence="1"
+            action="action_convenios_tree" />  <!-- Asociar la acción de la vista tree aquí -->
+
+        <menuitem
+            id="menu_oc_entrega_inm_module_id"
+            name="Entrega y recepción"
+            parent="menu_oc_operaciones_module_first_module_id"
+            sequence="1"
+            action="action_entrega_tree" />  <!-- Asociar la acción de la vista tree aquí -->
+
+        <menuitem
+            id="menu_oc_llaves_inm_module_id"
+            name="Entrega de llaves"
+            parent="menu_oc_operaciones_module_first_module_id"
+            sequence="2"
+            action="action_llaves_tree" />  <!-- Asociar la acción de la vista tree aquí -->
+
+    </data>
+</odoo>
